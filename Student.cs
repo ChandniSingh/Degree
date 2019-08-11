@@ -10,12 +10,23 @@ namespace SchoolProgram
         
         public static int lastStudentId = 0;
 
-        public String StudentName { get; set; }
+        public String StudentFirstName { get; set; }
         public int StudentId { get; set; }
 
+        public String StudentLastName { get; set; }
 
+        public String StudentBithdate { get; set; }
 
+        public String SAddressLine1 { get; set; }
+        public String SAddressLine2 { get; set; }
+
+        public String StudentCity { get; set; }
+        public int StudentZip { get; set; }
         
+        public String SCountry { get; set; }
+
+
+
         public Student()
         { 
 
