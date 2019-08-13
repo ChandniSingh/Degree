@@ -54,5 +54,16 @@ namespace SchoolProgram
 
             return course;
         }
+
+        public static bool ValidateStudentBirthdate(int studentId, string birthdate)
+        {
+            var student = AllStudents.Find(s => s.StudentId == studentId);
+            if (student == null)
+            {
+                throw new Exception("The student does not exist");
+            }
+
+            return student.ValidateBirthdate(birthdate);
+        }
     }
 }

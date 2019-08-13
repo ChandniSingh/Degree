@@ -13,7 +13,8 @@ namespace SchoolProgram
                 Console.WriteLine("1. Add Degrees in a Program");
                 Console.WriteLine("2. Add Student");
                 Console.WriteLine("3. Add Teacher");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("4. Validate Student Birthdate");
+                Console.WriteLine("5. Exit");
 
                 var option = Console.ReadLine();
                 switch (option)
@@ -27,9 +28,41 @@ namespace SchoolProgram
                     case "3":
                         AddTeacherDetails();
                         break;
+                    case "4":
+                        ValidateStudentBirthdate();
+                        break;
+                    case "5":
+                        return;
                     default:
                         break;
                 }
+            }
+        }
+
+        private static void ValidateStudentBirthdate()
+        {
+            Console.WriteLine("Please enter student id");
+            var studentId = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter the birthdate");
+            var birthdate = Console.ReadLine();
+
+            try
+            {
+                var isValid = Admin.ValidateStudentBirthdate(studentId, birthdate);
+
+                if (isValid)
+                {
+                    Console.WriteLine("The birthdate is valid");
+                }
+                else
+                {
+                    Console.WriteLine("The birthdate is not valid");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An exception occured while validating the birthdate - {ex.Message}");
             }
         }
 

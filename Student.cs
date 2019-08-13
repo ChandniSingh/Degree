@@ -5,9 +5,7 @@ using System.Text;
 namespace SchoolProgram
 {
     class Student
-
     {
-        
         public static int lastStudentId = 0;
 
         public String StudentFirstName { get; set; }
@@ -25,14 +23,15 @@ namespace SchoolProgram
         
         public String SCountry { get; set; }
 
-
-
         public Student()
         { 
 
             StudentId = lastStudentId++;
         }
 
-
+        public bool ValidateBirthdate(string birthdate)
+        {
+            throw new NotImplementedException("The method is not implemented yet.");
+        }
     }
 }
