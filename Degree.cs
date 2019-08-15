@@ -8,8 +8,8 @@ namespace SchoolProgram
     {
         BachelorsDegree,
         MastersDegree,
-        
     }
+
     class Degree
     {
         public Degrees Degrees { get; set; }

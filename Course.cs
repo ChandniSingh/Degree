@@ -8,7 +8,5 @@ namespace SchoolProgram
     {
         public String CourseName { get; set; }
         public int CourseId { get; set; }
-
-
     }
 }

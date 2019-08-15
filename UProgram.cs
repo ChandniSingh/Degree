@@ -8,11 +8,9 @@ namespace SchoolProgram
     {
         ComputerScienceProgram1,
         ComputerScienceProgram2
-        
     }
     class UProgram
     {
-
         public UPrograms ProgramName { get; set; }
     }
 }
